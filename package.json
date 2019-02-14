@@ -1,0 +1,25 @@
+{
+  "name": "freeteams",
+  "license": "MIT",
+  "engines": {
+    "node": "^6.14.0 || ^8.10.0 || >=9.10.0",
+    "yarn": "1.6.0"
+  },
+  "scripts": {
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "es6-promise": "^4.2.5",
+    "immutability-helper": "^2.9.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jwt-decode": "^2.2.0",
+    "mdbootstrap": "^4.7.0",
+    "mdbreact": "^4.9.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1"
+  }
+}
