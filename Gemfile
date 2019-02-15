@@ -46,7 +46,7 @@ end
 
 group :production do
   # Use postgres as the database for production
-  gem 'pg'
+   gem 'pg'
 end
 
 
